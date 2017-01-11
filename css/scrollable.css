@@ -4,11 +4,7 @@
 	box-sizing: border-box;
 }
 
-ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
+ul { list-style: none; margin: 0;padding: 0; }
 body {transition: all 2s;}
 .header {
 	height: calc( 100vh - 75px);
@@ -32,7 +28,7 @@ body {transition: all 2s;}
     height: 75px;
 	margin-right: 10px;
 }
-.scroll-menu-item.active {
+.scroll-menu-item.active-scroll-menu {
 	opacity: 0.5;
 }
 .scroll-menu-item figure {

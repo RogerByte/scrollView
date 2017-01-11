@@ -1,24 +1,22 @@
+
 var menu = document.getElementById('scrol-menu');
 var menuItems = document.getElementsByClassName('scroll-menu-item');
+
 var banner = document.getElementById('banner');
 watcherBanner = scrollMonitor.create(banner);
 
-function menuFixed() {
-	watcherBanner.enterViewport(function() {
-		menu.classList.remove('fixed');
-		$(".scroll-content-fixed").removeClass('display');
-	});
+watcherBanner.enterViewport(function() {
+	menu.classList.remove('fixed');
+	$(".scroll-content-fixed").removeClass('display');
+});
 
-	watcherBanner.exitViewport(function() {
-		menu.classList.add('fixed');
-		$(".scroll-content-fixed").addClass('display');
-	});
-
-}
+watcherBanner.exitViewport(function() {
+	menu.classList.add('fixed');
+	$(".scroll-content-fixed").addClass('display');
+});
 
 
 /*MENU*/
-
 for (var i = 0; i < menuItems.length; i++){
 	menuItems[i].addEventListener("click", function(event){
 		var selected = {
@@ -27,10 +25,9 @@ for (var i = 0; i < menuItems.length; i++){
 			body: this
 		}
 		goTo(this.attributes['data-name'].nodeValue);
-		menuFixed();
+		activeMenu(selected.id);
 	})
 }
-
 /*MENU*/
 
 function goTo(el) {
@@ -39,36 +36,9 @@ function goTo(el) {
 	}, 1000);
 }
 
-/*function goTo(el,to,duration) {
-  if (duration < 0) return;
-
-
-  var difference = to - el.scrollTop;
-  
-  if(difference < 0) {
-  	difference = difference * -1;
-  }
-setTimeout(function() {
-    el.scrollTop = el.scrollTop + perTick;
-    scrollTo(el, to, duration - 2);
-  }, 1000);
-  console.log(difference);
+function activeMenu(id) {
+	var currentMenuScroll = $(".active-scroll-menu");
+	var newMenuScroll = $("[data-name='"+id+"']");
+	currentMenuScroll.removeClass('active-scroll-menu');
+	newMenuScroll.addClass("active-scroll-menu");
 }
-
-
-function move(elem) {
-
-  var left = 0
-
-  function frame() {
-    
-    left++  // update parameters 
-    
-    elem.style.left = left + 'px' // show frame 
-
-    if (left == 100)  // check finish condition
-      clearInterval(id)
-  }
-
-  var id = setInterval(frame, 10) // draw every 10ms
-}*/
