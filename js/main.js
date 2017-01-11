@@ -42,3 +42,50 @@ function activeMenu(id) {
 	currentMenuScroll.removeClass('active-scroll-menu');
 	newMenuScroll.addClass("active-scroll-menu");
 }
+
+/*WATCHERS FOR ITEMS*/
+
+var i1 = document.getElementById('item1');
+var i2 = document.getElementById('item2');
+var i3 = document.getElementById('item3');
+var i4 = document.getElementById('item4');
+var i5 = document.getElementById('item5');
+var i6 = document.getElementById('item6');
+watcherItem1 = scrollMonitor.create(i1,-200);
+watcherItem2 = scrollMonitor.create(i2,-200);
+watcherItem3 = scrollMonitor.create(i3,-200);
+watcherItem4 = scrollMonitor.create(i4,-200);
+watcherItem5 = scrollMonitor.create(i5,-200);
+watcherItem6 = scrollMonitor.create(i6,-200);
+
+
+watcherItem1.enterViewport(function() {
+	activeMenu("item1");
+});
+
+watcherItem2.enterViewport(function() {
+	console.log('i2 entre');
+	activeMenu("item2");
+});
+
+watcherItem3.enterViewport(function() {
+	console.log('i3 entre');
+	activeMenu("item3");
+});
+
+watcherItem4.enterViewport(function() {
+	console.log('i4 entre');
+	activeMenu("item4");
+});
+
+watcherItem5.enterViewport(function() {
+	console.log('i5 entre');
+	activeMenu("item5");
+});
+
+watcherItem6.enterViewport(function() {
+	console.log('i6 entre');
+	activeMenu("item6");
+});
+
+/*WATCHERS FOR ITEMS*/
