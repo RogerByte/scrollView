@@ -2,6 +2,7 @@
 
 	/*Effects*/
 		var section_1 = $('#item1');
+		var section_2 = $('#item2');
 		var section_3 = $('#item3');
 
 		function EffectFx(el, options) {
@@ -26,22 +27,40 @@
 		}
 
 		/*Effect 1*/
-			efc1 = new EffectFx(section_1);
+			efc1 = new EffectFx(section_1, {
+				type: 'lf',
+			});
 			watcher_1 = scrollMonitor.create(section_1, -330);
 			watcher_1.enterViewport(function() {
-				efc1.showing();
+				efc1.showing({
+					type: 'lf',
+				});
 				watcher_1.destroy();
 			});
 		/*Effect 1*/
 
 		/*Effect 2*/
-			efc3 = new EffectFx(section_3);
+			efc2 = new EffectFx(section_2, {
+				type: 'lf',
+			});
+			watcher_2 = scrollMonitor.create(section_2, -330);
+			watcher_2.enterViewport(function() {
+				efc2.showing();
+				watcher_2.destroy();
+				watcher_2.destroy();
+			});
+		/*Effect 2*/
+
+		/*Effect 3*/
+			efc3 = new EffectFx(section_3, {
+				type: 'lf',
+			});
 			watcher_3 = scrollMonitor.create(section_3, -330);
 			watcher_3.enterViewport(function() {
 				efc3.showing();
 				watcher_3.destroy();
 			});
-		/*Effect 2*/
+		/*Effect 3*/
 	/*Effects*/
 
 })(jQuery);
