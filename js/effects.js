@@ -11,10 +11,17 @@
 			this.pic = this.rombo.children( ".scroll-rombo-figure");
 			this.container = this.el.children( ".scroll-description");
 			this.text = this.container.children( ".scroll-description-text");
+			this.options = options;
 		}
 		
 		EffectFx.prototype.showing = function() {
-			this.rombo.addClass('anime-rotate-right').delay(600).addClass('enable-true');
+			var type;
+			if(this.options.type == 'lf') {
+				type = 'anime-rotate-right';
+			} else if (this.options.type == 'rg') {
+				type = 'anime-rotate-left';
+			}
+			this.rombo.addClass(type).delay(600).addClass('enable-true');
 			this.pic.delay(600).queue(function(next) {
 			  $(this).addClass('anime-opacity').delay(300).addClass('enable-true');
 			});
@@ -32,21 +39,18 @@
 			});
 			watcher_1 = scrollMonitor.create(section_1, -330);
 			watcher_1.enterViewport(function() {
-				efc1.showing({
-					type: 'lf',
-				});
+				efc1.showing();
 				watcher_1.destroy();
 			});
 		/*Effect 1*/
 
 		/*Effect 2*/
 			efc2 = new EffectFx(section_2, {
-				type: 'lf',
+				type: 'rg',
 			});
 			watcher_2 = scrollMonitor.create(section_2, -330);
 			watcher_2.enterViewport(function() {
 				efc2.showing();
-				watcher_2.destroy();
 				watcher_2.destroy();
 			});
 		/*Effect 2*/
