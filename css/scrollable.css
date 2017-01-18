@@ -32,8 +32,12 @@ body {transition: all 2s;}
     height: 75px;
 	margin-right: 10px;
 }
+.scroll-menu-item:hover {
+	cursor: pointer;
+	background-position-y: -109px !important;
+}
 .scroll-menu-item.active-scroll-menu {
-	opacity: 0.5;
+	background-position-y: -109px !important;
 }
 .scroll-menu-item figure {
 	padding: 0;
