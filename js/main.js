@@ -1,3 +1,4 @@
+(function($){
 
 var menu = document.getElementById('scrol-menu');
 var menuItems = document.getElementsByClassName('scroll-menu-item');
@@ -7,12 +8,10 @@ watcherBanner = scrollMonitor.create(banner);
 
 watcherBanner.enterViewport(function() {
 	menu.classList.remove('fixed');
-	$(".scroll-content-fixed").removeClass('display');
 });
 
 watcherBanner.exitViewport(function() {
 	menu.classList.add('fixed');
-	$(".scroll-content-fixed").addClass('display');
 });
 
 
@@ -32,7 +31,7 @@ for (var i = 0; i < menuItems.length; i++){
 
 function goTo(el) {
 	$('html, body').animate({
-		scrollTop: $("#"+el).offset().top
+		scrollTop: $("#"+el).offset().top - 82
 	}, 1000);
 }
 
@@ -60,33 +59,28 @@ watcherItem6 = scrollMonitor.create(i6);
 
 
 watcherItem1.fullyEnterViewport(function() {
-	console.log('i1 entre');
 	activeMenu("item1");
 });
 
 watcherItem2.fullyEnterViewport(function() {
-	console.log('i2 entre');
 	activeMenu("item2");
 });
 
 watcherItem3.fullyEnterViewport(function() {
-	console.log('i3 entre');
 	activeMenu("item3");
 });
 
 watcherItem4.fullyEnterViewport(function() {
-	console.log('i4 entre');
 	activeMenu("item4");
 });
 
 watcherItem5.fullyEnterViewport(function() {
-	console.log('i5 entre');
 	activeMenu("item5");
 });
 
 watcherItem6.fullyEnterViewport(function() {
-	console.log('i6 entre');
 	activeMenu("item6");
 });
 
 /*WATCHERS FOR ITEMS*/
+})(jQuery);
