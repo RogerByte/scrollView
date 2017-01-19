@@ -7,10 +7,87 @@
 ul { list-style: none; margin: 0;padding: 0; }
 body {transition: all 2s;}
 .header {
+	position: relative;
 	height: calc( 100vh - 75px);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+}
+.header-headline {
+	width: 80%;
+    padding-left: 20%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40%;
+    margin: 0 auto;
+    font-size: 7vw;
+    line-height: 7vw;
+}
+.header-headline-client {
+	position: relative;
+	margin-left: 20%;
+	font-size: 105%;	
+	font-weight: bold;
+}
+.header-headline-client .client-arrow {
+	position: absolute;
+	right: 30%;
+	width: 10%;
+}
+.header-headline-client .client-arrow {
+	animation: arrow-efect 1.2s infinite;
+}
+.attacgment-bg {
+	min-height: 100%;
+	background-size: cover !important;
+	background-attachment: fixed !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+}
+.big-rombo {
+	width: 45%;
+    position: absolute;
+    bottom: 10%;
+    left: 2.1%;
+}
+.rec-green {
+	position: absolute;
+    width: 30%;
+    bottom: 50%;
+    left: 44%;
+}
+.square-orange {
+	position: absolute;
+	bottom: 57%;
+    width: 30%;
+    left: 5%;
+}
+.curve-white {
+	position: absolute;
+    bottom: 15%;
+    left: 15%;
+    width: 45%;
+}
+.curve-yellow {
+	position: absolute;
+	width: 45%;
+}
+.curve-blue {
+	position: absolute;
+    bottom: 0%;
+    right: -5%;
+    width: 35%;
+}
+.img-top {
+	position: absolute;
+    top: 0;
+    right: 15%;
+    width: 30%;
+}
+.img-bottom {
+	position: absolute;
+    bottom: -10px;
+}
+.image-full-width {
+	max-width: 100%;
 }
 .contenido-scroll-menu { width: 100%; z-index: 999; position: relative;}
 .contenido-scroll-menu.fixed { position: fixed; top: 0;}
@@ -58,7 +135,6 @@ body {transition: all 2s;}
 /*SECTIONS*/
 .scroll-thumbnail {
 	position: relative;
-	
 }
 .scroll-rombo {
 	position: absolute;
@@ -173,5 +249,10 @@ body {transition: all 2s;}
 @keyframes anime-opacity {
     from { opacity: 0;}
     to { opacity: 1;}
+}
+@keyframes arrow-efect {
+    0% { top: 100%;}
+    50% { top: 90%;}
+    100% { top: 100%;}
 }
 /*animations*/
