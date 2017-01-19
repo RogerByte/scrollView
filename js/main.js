@@ -6,6 +6,28 @@
 		
 		setTimeout(function() {
 			document.body.classList.remove('loading');
+
+			var rev1 = new RevealFx(document.querySelector('#rev-1'), {
+				revealSettings : {
+					bgcolor: '#fdbe10',
+					onCover: function(contentEl, revealerEl) {
+						contentEl.style.opacity = 1;
+					}
+				}
+			});
+			rev1.reveal();
+
+			var rev2 = new RevealFx(document.querySelector('#rev-2'), {
+				revealSettings : {
+					bgcolor: '#1c5eb6',
+					delay: 250,
+					onCover: function(contentEl, revealerEl) {
+						contentEl.style.opacity = 1;
+					}
+				}
+			});
+			rev2.reveal();
+
 		}, 1000);
 		/*Loadding*/
 
