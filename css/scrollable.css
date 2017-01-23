@@ -1,9 +1,55 @@
+/*FONT STYLE*/
+@font-face {
+    font-family: 'montserratblack';
+    src: url('../font/montserrat-black-webfont.woff2') format('woff2'),
+         url('../font/montserrat-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'montserratlight';
+    src: url('../font/montserrat-light-webfont.woff2') format('woff2'),
+         url('../font/montserrat-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../font/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../font/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'montserratultra_light';
+    src: url('../font/montserrat-ultralight-webfont.woff2') format('woff2'),
+         url('../font/montserrat-ultralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.mont-b {
+	font-family: 'montserratblack';
+}
+.mont-l {
+	font-family: 'montserratlight';
+}
+.mont-r {
+	font-family: 'montserratregular';
+}
+.mont-u-l {
+	font-family: 'montserratultra_light';
+}
+/*FONT STYLE*/
+
+
 *,
 *::after,
 *::before {
 	box-sizing: border-box;
 }
-
 ul { list-style: none; margin: 0;padding: 0; }
 body {transition: all 2s;}
 
