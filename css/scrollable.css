@@ -329,10 +329,14 @@ body {transition: all 2s;}
 	padding-right: 40%;
 }
 .scroll-rombo-figure {
+	width: 65%;
 	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 	transform: rotate(-45deg);
 	opacity: 0;
+}
+.scroll-rombo-figure img {
+	max-width: 100%;
 }
 .scroll-rombo-figure.enable-true {
 	opacity: 1;
