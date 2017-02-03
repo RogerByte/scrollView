@@ -10,14 +10,17 @@
       	$(window).on("load", function() {
 			/*Loading*/
 			$('.loading').addClass('off-bck');
-			
 			var s_orange = $('.square-orange'),
 			bs_orange = $('.big-square-orange'),
 			c_white = $('.curve-white'),
 			c_yellow = $('.curve-yellow'),
 			c_blue = $('.curve-blue'),
 			r_green = $('.rec-green'),
-			i_bottom = $('.img-bottom');
+			i_bottom = $('.img-bottom'),
+			arrow_bottom = $('.client-arrow'),
+			menu = document.getElementById('scrol-menu'),
+			menuItems = document.getElementsByClassName('scroll-menu-item'),
+			c_arrow = document.getElementById('c_arrow');
 
 			i_bottom .delay(1500).queue(function(next) {
 				$(this).addClass('anime-translate').delay(800).addClass('enable-true');
@@ -40,6 +43,9 @@
 			});
 			r_green.delay(2300).queue(function(next) {
 				$(this).addClass('anime-translate').delay(600).addClass('enable-true');
+			});
+			arrow_bottom.delay(2500).queue(function(next) {
+				$(this).addClass('anime-opacity').delay(600).addClass('enable-true').addClass('client-arrow-anime');
 			});
 			setTimeout(function() {
 				document.body.classList.remove('loading');
@@ -69,10 +75,7 @@
 			}, 1000);
 			/*Loadding*/
 
-			var menu = document.getElementById('scrol-menu');
-			var menuItems = document.getElementsByClassName('scroll-menu-item');
-
-			var c_arrow = document.getElementById('c_arrow');
+			
 			c_arrow.addEventListener("click", function(event){
 				goTo('item1');
 				activeMenu('item1');
