@@ -143,8 +143,12 @@ body {transition: all 2s;}
     right: 15%;
     width: 6%;
     cursor: pointer;
+    opacity: 0;
 }
-.client-arrow {
+.client-arrow.enable-true {
+	opacity: 1;
+}
+.client-arrow-anime {
 	animation: arrow-efect 1.2s infinite;
 }
 .attacgment-bg {
@@ -302,7 +306,7 @@ body {transition: all 2s;}
 .scroll-rombo {
 	position: absolute;
 	top: calc( 50% - 175px);
-	left: 15%;
+	left: 10%;
 	transform: rotate(45deg);
 	width: 350px;
 	height: 350px;
@@ -328,7 +332,7 @@ body {transition: all 2s;}
 /*effect for rombo*/
 
 .right-rombo .scroll-rombo {
-	right: 15%;
+	right: 10%;
 	left: auto;
 }
 .right-rombo .scroll-description {
@@ -356,11 +360,14 @@ body {transition: all 2s;}
 	animation: anime-opacity 0.6s;
 }
 .scroll-description {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: absolute;
 	left: 28%;
 	top: 50%;
-	width: 58%;
-	min-height: 120px;
+	width: 65%;
+	min-height: 140px;
 	background: #fff;
 	opacity: 0;
 }
@@ -379,7 +386,7 @@ body {transition: all 2s;}
 
 .scroll-description.enable-true {
 	opacity: 1;
-	padding: 20px 10px;
+	padding: 10px;
 }
 .scroll-description.anime-width {
 	animation: anime-width 0.6s;
@@ -388,7 +395,7 @@ body {transition: all 2s;}
 .scroll-description-text {
 	margin: 0;
 	font-size: 22px;
-    line-height: 24px;
+    line-height: 23px;
     opacity: 0;
     display: none;
 }
