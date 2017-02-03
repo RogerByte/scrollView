@@ -257,6 +257,7 @@ body {transition: all 2s;}
 	max-width: 100%;
 }
 .contenido-scroll-menu { width: 100%; z-index: 999; position: relative;}
+.contenido-scroll-menu.fixedDebug { position: fixed; top: 32.5px;}
 .contenido-scroll-menu.fixed { position: fixed; top: 0;}
 .scroll-content-fixed {display: none;}
 .scroll-content-fixed.display {display: block; height: 75px;}
