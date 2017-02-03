@@ -1,10 +1,6 @@
 (function($){
 	var clients, debug = true;
-	if(debug){
-		clients = '/clients/'
-	} else {
-		clients = window.location.pathname;
-	}
+	clients = debug ? '/clients/' : window.location.pathname;
 	
 	if(clients == '/clients/') {
       	$(window).on("load", function() {
@@ -82,14 +78,14 @@
 			});
 
 			var banner = document.getElementById('banner');
-			watcherBanner = scrollMonitor.create(banner, -120);
+			watcherBanner = debug ? scrollMonitor.create(banner, -33) : scrollMonitor.create(banner, -120);
 
 			watcherBanner.enterViewport(function() {
-				menu.classList.remove('fixed');
+				menu.classList.remove( debug ? 'fixedDebug' : 'fixed' );
 			});
 
 			watcherBanner.exitViewport(function() {
-				menu.classList.add('fixed');
+				menu.classList.add( debug ? 'fixedDebug' : 'fixed' );
 			});
 
 
