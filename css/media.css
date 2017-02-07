@@ -45,8 +45,8 @@
 	}
 	.scroll-rombo, .right-rombo .scroll-rombo {
 		top: calc( 50% - 125px);
-		width: 250px;
-		height: 250px;
+		width: 270px;
+		height: 270px;
 	}
 	.scroll-rombo {
 		left: 10%;
@@ -55,18 +55,20 @@
 		right: 10%;
 	}
 	.scroll-description, .right-rombo .scroll-description {
-		min-height: 125px;
+		min-height: 235px;
 	}
 	.scroll-description-text.enable-true {
 		padding: 0;
-		padding-left: 40%;
+		padding-left: 38%;
 	}
+	.scroll-description { left: 26.5%; }
+	.right-rombo .scroll-description { right: 26.5%; }
 	.right-rombo .scroll-description .scroll-description-text {
 		padding: 0;
-		padding-right: 28%;
+		padding-right: 37%;
 	}
 	.scroll-description-text {
-		font-size: 16px;
+		font-size: 12px;
 		line-height: 16px;
 	}
 
@@ -85,7 +87,7 @@
 		line-height: 8.5vw;
 	}
 	.mobil-on .scroll-rombo, .right-rombo .scroll-rombo {
-		top: calc( 50% - 75px);
+		top: calc( 30% - 75px);
 		left: 0;
 		right: 0;
 		margin: 0 auto;
@@ -115,14 +117,14 @@
 		left: 0;
 		right: 0;
 		margin: 0 auto;
-		top: 70%;
-		width: 80%;
+		top: 50%;
+		width: 90%;
 		z-index: 3;
 		min-height: 90px;
 	}
 	.mobil-on .scroll-description-text {
-		font-size: 16px;
-		line-height: 16px;
+		font-size: 12px;
+    	line-height: 14px;
 		text-align: center !important;
 		opacity: 1;
 		display: block;
@@ -164,12 +166,12 @@
 		margin-left: 0%;
 	}
 	.mobil-on .scroll-rombo, .right-rombo .scroll-rombo {
-	    top: calc( 50% - 75px);
+	    top: calc( 30% - 75px);
 	    left: 0;
 	    right: 0;
 	    margin: 0 auto;
-	    width: 150px;
-	    height: 150px;
+	    width: 130px;
+	    height: 130px;
 	}
 	.client-arrow {
 		right: 16%;
@@ -195,8 +197,9 @@
 	    bottom: 200%;
 	    left: 200%;
 	}
+	.mobil-on .scroll-description-text {line-height: 13px;}
 	.mobil-on .scroll-description, .right-rombo .scroll-description {
-		top: 60%;
+		top: 35%;
 	}
 	.square-orange {
 		bottom: 200%;
