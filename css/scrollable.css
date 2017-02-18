@@ -52,7 +52,10 @@
 }
 ul { list-style: none; margin: 0;padding: 0; }
 body {transition: all 2s;}
-
+a, a:link, a:visited, a:active {
+	text-decoration: none;
+	color: #000;
+}
 .enty-c-black {
 	color: #222;
 }
@@ -448,3 +451,80 @@ body {transition: all 2s;}
     100% { top: 100%;}
 }
 /*animations*/
+
+.e-popup {
+	position: fixed;
+	width: 100%;
+	height: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 1000;
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity 0.3s;
+}
+.e-popup.visible {
+	height: 100vh;
+	opacity: 1;
+}
+.e-overflow-hidden {
+	overflow: hidden;
+}
+.e-popup .e-popup-close {
+	cursor: pointer;
+	position: absolute;
+	right: 50px;
+	top: 25px;
+	color: #fff;
+	font-size: 5vw;
+	transition: all 0.3s;
+}
+.e-popup .e-popup-close:hover {
+	color: #000;
+}
+.e-popup .e-popup-content {
+	width: 100%;
+	height: 100vh;
+	background: #222;
+}
+.e-popup .banner-popup {
+	width: 100%;
+	height: 40vh;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.banner-cta-box {
+	width: 100%;
+	height: 60vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.banner-cta-box-text {
+	font-size: 3vw;
+	line-height: 3.5vw;
+	color: #fff;
+	font-weight: 700;
+}
+.banner-cta-box-text.big {
+	font-size: 3.5vw;
+	line-height: 4.5vw;
+}
+.e-btn {
+	display: inline;
+	padding: 10px 15px;
+	margin: 15px 0px;
+	border-radius: 10px;
+	font-weight: bold;
+	transition: all 0.3s;
+}
+.e-btn.e-btn-yellow {
+	background: #fdbe11;
+}
+.e-btn:hover {
+	background: #000;
+	color: #FFF;
+}	

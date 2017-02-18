@@ -74,6 +74,20 @@
 
 }
 @media (max-width: 767px) {
+	.e-popup-close {
+		color: #000 !important;
+		font-size: 10vw !important;
+	}
+	.banner-cta-box-text {
+		font-size: 7vw;
+		line-height: 7.5vw;
+		text-align: center;
+	}
+	.banner-cta-box-text.big {
+		font-size: 8.5vw;
+		line-height: 9vw;
+		text-align: center;
+		}
 	.img-bottom {
 		display: none;
 	}
