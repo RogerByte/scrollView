@@ -1,7 +1,7 @@
 (function($){
 	var clients, debug = true;
 	clients = debug ? '/clients/' : window.location.pathname;
-	if(clients == '/clients/') {
+	if(clients == '/clients/' || clients == '/es/clientes/') {
 		var querie_mobil = window.matchMedia('(max-width: 767px)');
 		var $flat = 0;
 
